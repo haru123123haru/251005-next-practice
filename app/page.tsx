@@ -2,6 +2,12 @@ import AlertButton from "@/components/AlertButton/AlertButton";
 import About from "./about/page";
 import Link from "next/link";
 
+type User = {
+  id: number;
+  name: string;
+  email?: string;
+};
+
 async function getUsers() {
   try {
     const res = await fetch('https://jsonplaceholder.typicode.com/users' , {
