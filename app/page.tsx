@@ -27,7 +27,7 @@ async function getUsers() {
 
 export default async function Home() {
 
-  const users = await getUsers();
+  const users: User[] = await getUsers();
   return (
     <div>
       <ul>
